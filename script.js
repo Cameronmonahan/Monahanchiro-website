@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var body = encodeURIComponent(
         'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone
       );
-      window.location.href = 'mailto:socalchiro@gmail.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:mlmdc1@yahoo.com?subject=' + subject + '&body=' + body;
     });
   }
 });

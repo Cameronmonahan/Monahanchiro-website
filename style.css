@@ -83,8 +83,14 @@ img, svg { display: block; max-width: 100%; }
   color: var(--ink);
   letter-spacing: 0.01em;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
+}
+
+.brand img {
+  height: 52px;
+  width: auto;
+  display: block;
 }
 
 .brand .est {
@@ -590,6 +596,48 @@ footer {
   gap: 10px;
 }
 
+/* ---------- Reviews ---------- */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-stars {
+  color: var(--gold);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.review-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.review-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.review-source {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
 /* ---------- Lead capture form ---------- */
 .lead-card {
   background: var(--paper);
@@ -808,7 +856,40 @@ footer {
 .bio-portrait {
   aspect-ratio: 4/5;
   border-radius: 18px;
+  overflow: hidden;
   background: linear-gradient(160deg, #DCC9A6 0%, #C7A369 100%);
+}
+
+.bio-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* ---------- Family gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.gallery-caption {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  font-style: italic;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .bio-tagline {
@@ -904,8 +985,16 @@ footer {
   aspect-ratio: 3/4;
   border-radius: 18px;
   background: linear-gradient(160deg, #DCC9A6 0%, #C7A369 100%);
+  overflow: hidden;
   position: sticky;
   top: 100px;
+}
+
+.story-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .story-text p {
@@ -968,6 +1057,8 @@ footer {
   .offer { grid-template-columns: 1fr; padding: 32px; }
   .pain-grid, .bio-grid { grid-template-columns: 1fr; }
   .bio-portrait { aspect-ratio: 16/9; }
+  .review-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
 }
 
 @media (max-width: 900px) {
