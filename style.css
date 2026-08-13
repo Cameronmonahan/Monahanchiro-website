@@ -269,6 +269,20 @@ h1 em {
   padding: 22px;
 }
 
+.hero-portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 0;
+}
+
+.hero-portrait.hero-portrait-wide {
+  aspect-ratio: 5/4;
+}
+
 .hero-portrait-tag {
   background: var(--paper);
   border-radius: 12px;
@@ -969,7 +983,12 @@ footer {
 
 /* ---------- About page specifics ---------- */
 .about-hero {
-  padding: 64px 0 20px;
+  padding: 64px 0 60px;
+}
+
+.about-hero .wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .about-hero h1 { max-width: 16ch; }
